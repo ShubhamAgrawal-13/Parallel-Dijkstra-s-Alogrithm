@@ -42,8 +42,11 @@ The thing I have learnt from this assignment is that almost everyhting is possib
 
 # How to execute ?
 
-Compilation: `erlc dijsktra_parallel.erl`
-Execution: `erl -noshell -s dijsktra_parallel main input/input1.txt output/output1.txt -s init stop`
+Compilation Command: `erlc dijsktra_parallel.erl`
+
+Execution Command: `erl -noshell -s dijsktra_parallel main input/input1.txt output/output1.txt -s init stop`
+
+![parallel_dijstra_image.png]
 
 ------------------------------------------------------------------------------------------------------------
 

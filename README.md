@@ -19,13 +19,13 @@ To implement this, I have used Parallel Dijkstra’s Algorithm. There were many 
 4. Each process will update its visited list.
 5. After that combine all the distance vector.
 
-`dijkstra(I, N, Pids, S, D, Ans) ->
+```dijkstra(I, N, Pids, S, D, Ans) ->
 	send_each_process(Pids, S, D), 
 	Len = length(Pids),
 	List1 = collect(1, Len),
 	Min = min(List1),
 	Ans1 = maps:put(element(2, Min), element(1, Min), Ans),
-	dijkstra(I+1, N, Pids, element(2, Min), element(1, Min), Ans1).`
+	dijkstra(I+1, N, Pids, element(2, Min), element(1, Min), Ans1).```
 
 Here, We start with (S, D) = (S, 0), where S is source vertex, then send it to all process, Now, collect the local min vertex, Now, compute global min vertex, and then recur. 
 
